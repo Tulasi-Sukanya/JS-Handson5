@@ -1,0 +1,91 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+}
+body{
+    background-color: #DCD9D4;
+    /* background-image: linear-gradient(to bottom, rgba(255,255,255,0.50) 0%, rgba(0,0,0,0.50) 100%), radial-gradient(at 50% 0%, rgba(255,255,255,0.10) 0%, rgba(0,0,0,0.50) 50%); */
+    /* background-blend-mode: soft-light,screen; */
+    background-image: linear-gradient(120deg, #89f7fe 0%, #66a6ff 100%);
+}
+h1{
+    text-align: center;
+    background-image: linear-gradient(to right, #fa709a 0%, #fee140 100%);
+    border-radius: 10px;
+    height: 40px;
+}
+font{
+    float: right;
+    font-weight: bold;
+    text-decoration: underline;
+}
+.container{
+    height: auto;
+    width: 100%;
+    margin: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.card{
+    height: 300px;
+    width: 300px;
+    margin: 10px;
+    justify-content: center;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: skyblue ;
+    --angle: 0deg;
+    border: 1rem solid;
+    border-image: linear-gradient(var(--angle),#f6d365, #c471ed,#f64f59) 0.5;
+    background-image: linear-gradient(-60deg, #16a085 0%, #f4d03f 100%);
+    animation: 5s rotate linear infinite;
+}
+@keyframes rotate {
+    to {
+        --angle: 360deg;
+    };
+}
+.card pre{
+    visibility: hidden;
+}
+.card:hover{
+    background-image: linear-gradient(to top,#12c2e9 0%, #e14fad 50%, #f9d423 100%);
+}
+.card:hover p{
+    display: none;
+}
+.card:hover pre{
+    visibility: visible;
+}
+span{
+    font-weight: bold;
+    font-size: 20px;
+    color: black;
+}
+p{
+    font-size: 17px;
+    font-family: 'Times New Roman', Times, serif;
+}
+pre{
+    margin-left: -100px;
+    text-align: left;
+    font-weight: bold;
+    font-size: 11px;
+    color: navy;
+    overflow: hidden;
+}
+@media screen and (min-width:350px) and (max-width:600px) {
+    .container{
+        resize: both;
+        overflow: auto;
+    }
+    font{
+        float: center;
+    }
+    .card{
+        flex-flow: 1 1 auto;
+    }
+}
+
