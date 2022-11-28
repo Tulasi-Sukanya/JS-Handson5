@@ -9,7 +9,7 @@
 </head>
 <body>
     <h1>JS Handson-5(Strings)</h1>
-    <font>On hover u can see code</font>
+    <marquee>On hover u can see code</marquee>
     <div class="container">
         <div class="card">
             <span>1.Count Characters</span><br><br>
@@ -139,13 +139,27 @@
             </pre>
         </div>
         <div class="card">
-            <span>8.Plaindrome Check</span><br><br>
+            <span>8.Plaindrome Check</span>
             <p>You are given a string S, Your task is to check wether the given string is a Palindrome or not.A Palindrome is a string, which turnout same when read in reverse direction.Example: "naman" is a Palindrome.String can contain both upppercase lowercase letters</p>
             <pre>
-                Input1:Naman
-                Output1:False
-                Input2:naman
-                Output2:True
+                var Palin_Check = (str) =>{
+                    const forwardarr=[];
+                    const backwardarr=[];
+                    let count=0;
+                    for( let i=0; i < str.length; i++){
+                        forwardarr.push(str.charAt(i));
+                    }for( let i=str.length-1; i >= 0; i--){
+                        backwardarr.push(str.charAt(i));
+                    }for( let i=0; i < str.length; i++){
+                        if(forwardarr[i] === backwardarr[i]){
+                            count += 1;
+                        }
+                    }if(count === str.length){
+                        return "True";
+                    }else{
+                        return "False";}};
+                Input1:Naman    Input2:naman
+                Output1:False   Output2:True
             </pre>
         </div>
         <div class="card">

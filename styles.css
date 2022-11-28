@@ -14,9 +14,9 @@ h1{
     border-radius: 10px;
     height: 40px;
 }
-font{
-    float: right;
-    font-weight: bold;
+marquee{
+    direction: left;
+    font-weight: 400;
     text-decoration: underline;
 }
 .container{
@@ -80,9 +80,6 @@ pre{
     .container{
         resize: both;
         overflow: auto;
-    }
-    font{
-        float: center;
     }
     .card{
         flex-flow: 1 1 auto;
